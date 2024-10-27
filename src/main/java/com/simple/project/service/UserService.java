@@ -1,13 +1,18 @@
 package com.simple.project.service;
 
-import com.simple.project.domain.User;
+import java.util.Map;
+
 import com.simple.project.dto.UserDTO;
 
 import jakarta.transaction.Transactional;
 
 @Transactional
 public interface UserService {
- UserDTO insertUser(UserDTO user);
+ UserDTO register(UserDTO userDTO);
 
- UserDTO getUserInfo(String id);
+ UserDTO getUser(String userId);
+
+ UserDTO updateUser(UserDTO userDTO);
+
+ Map<Object, Boolean> deleteUser(Long uno);
 }
